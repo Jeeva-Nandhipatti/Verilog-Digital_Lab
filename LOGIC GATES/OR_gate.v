@@ -23,10 +23,10 @@ module tb;
   
   initial begin
     $display("OR Gate Operation: ");
-    a=0; b=0; #10 $display("%b AND %b = %b",a,b,out);
-    a=0; b=1; #10 $display("%b AND %b = %b",a,b,out);
-    a=1; b=0; #10 $display("%b AND %b = %b",a,b,out);
-    a=1; b=1; #10 $display("%b AND %b = %b",a,b,out);
+    a=0; b=0; #10 $display("%b OR %b = %b",a,b,out);
+    a=0; b=1; #10 $display("%b OR %b = %b",a,b,out);
+    a=1; b=0; #10 $display("%b OR %b = %b",a,b,out);
+    a=1; b=1; #10 $display("%b OR %b = %b",a,b,out);
     $finish;
   end
 endmodule
