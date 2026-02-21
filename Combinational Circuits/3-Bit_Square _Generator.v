@@ -1,5 +1,3 @@
-`timescale 1ns/1ps
-
 //--------------------
 //		DESIGN
 //--------------------
@@ -25,32 +23,32 @@ module tb;
   reg a,b,c;
   wire y0,y1,y2,y3,y4,y5;
   
-  Square_generator dut(a,b,c,y0,y1,y2,y3,y4,y5);
+  Square_generator dut(a,b,c,y0,y1,y2,y3,y4,y5);      //Instantiation of design module
   
   initial begin
     
-    a=0; b=0; c=0; #10 
+    a=1'b0; b=1'b0; c=1'b0; #10 
     $display("square value of %b%b%b = %b%b%b%b%b%b",a,b,c,y5,y4,y3,y2,y1,y0);
     
-    a=0; b=0; c=1; #10 
+    a=1'b0; b=1'b0; c=1'b1; #10 
     $display("square value of %b%b%b = %b%b%b%b%b%b",a,b,c,y5,y4,y3,y2,y1,y0);
     
-    a=0; b=1; c=0; #10 
+    a=1'b0; b=1'b1; c=1'b0; #10 
     $display("square value of %b%b%b = %b%b%b%b%b%b",a,b,c,y5,y4,y3,y2,y1,y0);
     
-    a=0; b=1; c=1; #10 
+    a=1'b0; b=1'b1; c=1'b1; #10 
     $display("square value of %b%b%b = %b%b%b%b%b%b",a,b,c,y5,y4,y3,y2,y1,y0);
     
-    a=1; b=0; c=0; #10 
+    a=1'b1; b=1'b0; c=1'b0; #10 
     $display("square value of %b%b%b = %b%b%b%b%b%b",a,b,c,y5,y4,y3,y2,y1,y0);
     
-    a=1; b=0; c=1; #10 
+    a=1'b1; b=1'b0; c=1'b1; #10 
     $display("square value of %b%b%b = %b%b%b%b%b%b",a,b,c,y5,y4,y3,y2,y1,y0);
     
-    a=1; b=1; c=0; #10 
+    a=1'b1; b=1'b1; c=1'b0; #10 
     $display("square value of %b%b%b = %b%b%b%b%b%b",a,b,c,y5,y4,y3,y2,y1,y0);
     
-    a=1; b=1; c=1; #10 
+    a=1'b1; b=1'b1; c=1'b1; #10 
     $display("square value of %b%b%b = %b%b%b%b%b%b",a,b,c,y5,y4,y3,y2,y1,y0);
     $finish;
   end
